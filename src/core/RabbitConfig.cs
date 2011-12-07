@@ -13,4 +13,9 @@ namespace core
         public const string Web02Node = "web2";
         public const int Web02Port = 5675;
     }
+
+    public class RabbitSettings
+    {
+        public string ConnectionString { get; set; }
+    }
 }

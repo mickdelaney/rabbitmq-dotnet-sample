@@ -1,13 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using core;
 using core.Messages;
 using EasyNetQ;
 using RabbitMQ.Client;
 
-namespace app
+namespace client
 {
     class Program
     {
@@ -34,7 +31,7 @@ namespace app
 
             var connectionString = "host=localhost;port=5675;username=guest;password=guest";
             var bus = RabbitHutch.CreateBus(connectionString);
-            bus.Subscribe<ContractorActivatedEvent>("CVParserSubscription", msg => System.Console.WriteLine(msg.EmailAddress));
+            bus.Subscribe<ContractorActivatedEvent>("CVParserSubscription", msg => Console.WriteLine(msg.EmailAddress));
 
             //ConnectionFactory factory = new ConnectionFactory();
             //factory.Uri = "amqp://user:pass@hostName:port/vhost";

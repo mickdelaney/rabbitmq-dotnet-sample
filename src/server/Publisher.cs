@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace rabbitmq_clustering
+﻿namespace server
 {
     public class Publisher
     {
